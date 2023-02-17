@@ -1,18 +1,17 @@
 import React from "react";
 
-const User = (props) => {
-    console.log(props)
-    const {
-        _id,
-        name,
-        profession,
-        qualities,
-        completedMeetings,
-        rate,
-        bookmark,
-        onDelete
-    } = props
+const User = ({
+    _id,
+    name,
+    profession,
+    qualities,
+    completedMeetings,
+    rate,
+    bookmark,
+    onDelete}) => {
   return (
+    
+    
     // create row table
     <tr key={_id}>
       <td>{name}</td>

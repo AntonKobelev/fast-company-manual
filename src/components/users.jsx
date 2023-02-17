@@ -4,7 +4,7 @@ import User from "./user";
 
 const Users = (props) => {
     const {users, onDelete} = props
-    console.log(props)
+    //console.log('users', users)
     // return html 
     return (
         <>  
@@ -24,8 +24,9 @@ const Users = (props) => {
                 <tbody>
                     {/* run for array of users with map method */}
                     {users.map((user) => {
+                        //console.log('user', user)
                         return (
-                            <User key = {user._id} {...users} onDelete = {onDelete}/>
+                            <User key = {user._id} {...user} onDelete = {onDelete}/>
                         )
                     })}
                 </tbody>
