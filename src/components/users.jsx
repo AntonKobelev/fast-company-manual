@@ -3,7 +3,7 @@ import User from "./user";
 
 
 const Users = (props) => {
-    const {users, onDelete} = props
+    const {users, ...rest} = props
     //console.log('users', users)
     // return html 
     return (
@@ -18,6 +18,7 @@ const Users = (props) => {
                         <th scope="col">Профессия</th>
                         <th scope="col">Встретился, раз</th>
                         <th scope="col">Оценка</th>
+                        <th scope="col">Избранное</th>
                         <th scope="col"></th>
                     </tr>
                 </thead>
@@ -26,7 +27,7 @@ const Users = (props) => {
                     {users.map((user) => {
                         //console.log('user', user)
                         return (
-                            <User key = {user._id} {...user} onDelete = {onDelete}/>
+                            <User key = {user._id} {...user} {...rest} />
                         )
                     })}
                 </tbody>
